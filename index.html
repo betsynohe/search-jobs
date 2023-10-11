@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap"
-        rel="stylesheet">
+
     <!-- link para los iconos-->
     <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
     <!-- favicon -->
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <!-- bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <!-- link google font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet"> -->
     <!-- estilo de la pagina -->
     <link rel="stylesheet" href="style.css">
     <title>Jobs Panda</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar header" role="navigation" aria-label="main navigation">
-            <figure class="ml-6 mt-3 mb-3">
-                <img src="./assets/logo-panda.png" width="150" height="150">
-            </figure>
+    <header class="is-flex">
+        <figure class="ml-6 mt-3 mb-3">
+            <img src="./assets/logo-panda.png" width="180" height="180">
+        </figure>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <h1 class="title has-text-centered m-6 is-size-4-touch">Trabajá con nosotros para proteger el Valle de la
+                Paz</h1>
             <section class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons mr-6">
@@ -42,7 +43,76 @@
         </nav>
     </header>
     <main>
-        
+        <section class="banner">
+            <!-- select de categorias -->
+            <section class="is-flex is-justify-content-center pt-6">
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small mr-3">
+                        <select name="filter-category" id="category">
+                            <option selected>Categorías</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <!-- select de locaciones -->
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small mr-3">
+                        <select name="filter-category" id="category">
+                            <option selected>Ubicación</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+                <!-- select de habilidades -->
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small">
+                        <select name="filter-category" id="category">
+                            <option selected>Habilidades</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <div class="mt-6 pt-6 is-danger">
+                    <button class="button is-rounded is-success ml-6 is-small">
+                        <span>Buscar</span>
+                        <span class="icon is-small">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </button>
+                    <button class="button is-rounded is-small is-danger">
+                        <span>Limpiar</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </button>
+                </div>
+
+            </section>
+        </section>
     </main>
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>

@@ -1,4 +1,12 @@
-.header{
-    background: rgb(234,28,36);
-    background: linear-gradient(106deg, rgba(234,28,36,1) 0%, rgba(248,149,29,1) 35%, rgba(77,126,72,1) 100%);
+@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+ body{
+    font-family: 'Julee', cursive;
+ }
+.banner{
+    height: 200px;
+    background-image: url(./assets/banner-Kung\ Fu\ Panda.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
