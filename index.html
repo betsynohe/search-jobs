@@ -1,135 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- link para los iconos-->
-    <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <!-- bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <!-- link google font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- link para los iconos-->
+        <script
+            src="https://kit.fontawesome.com/d2f0778e32.js"
+            crossorigin="anonymous"
+        ></script>
+        <!-- favicon -->
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon.ico"
+            type="image/x-icon"
+        />
+        <!-- bulma -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+        />
+        <!-- link google font -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet"> -->
-    <!-- estilo de la pagina -->
-    <link rel="stylesheet" href="style.css">
-    <title>Jobs Panda</title>
-</head>
+        <!-- estilo de la pagina -->
+        <link rel="stylesheet" href="style.css" />
+        <title>Jobs Panda</title>
+    </head>
 
-<body>
-    <!-- navbar header -->
-    <header class="is-flex">
-        <figure class="ml-6 mt-3 mb-3">
-            <img src="./assets/logo-panda.png" width="180" height="180">
-        </figure>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <h1 class="title has-text-centered m-6 is-size-4-touch">Trabajá con nosotros para proteger el Valle de la
-                Paz</h1>
-            <section class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons mr-6">
-                        <a href="index.html" class="button ">
-                            <strong>Home</strong>
-                        </a>
-                        <a href="#" class="button">
-                            <strong>Crear Trabajo</strong>
-                        </a>
+    <body>
+        <!-- navbar header -->
+        <header class="is-flex">
+            <figure class="ml-6 mt-3 mb-3">
+                <img src="./assets/logo-panda.png" width="180" height="180" />
+            </figure>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <h1 class="title has-text-centered m-6 is-size-4-touch">
+                    Trabajá con nosotros para proteger el Valle de la Paz
+                </h1>
+                <section class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons mr-6">
+                            <a href="index.html" class="button">
+                                <strong>Home</strong>
+                            </a>
+                            <a href="#" class="button">
+                                <strong>Crear Trabajo</strong>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </nav>
-    </header>
-    <!-- main -->
-    <main>
-        <section class="field banner">
-            <!-- select de categorias -->
-            <section class="is-flex is-justify-content-center pt-6">
-                <div class="control has-icons-left mt-6 pt-6">
-                    <div class="select is-rounded is-small mr-3">
-                        <select name="filter-category" id="category">
-                            <option selected>Categorías</option>
-                            <option value="alimentacion">Alimentación</option>
-                            <option value="seguridad">Seguridad</option>
-                            <option value="educacion">Educación</option>
-                            <option value="Musica">Música</option>
-                            <option value="vidente">Adivina</option>
-                            <option value="servicios">Servicios</option>
-                        </select>
+                </section>
+            </nav>
+        </header>
+        <!-- main -->
+        <main>
+            <section class="field banner">
+                <!-- select de categorias -->
+                <section class="is-flex is-justify-content-center pt-6">
+                    <div class="control has-icons-left mt-6 pt-6">
+                        <div class="select is-rounded is-small mr-3">
+                            <select name="filter-category" id="category">
+                                <option selected>Categorías</option>
+                                <option value="alimentacion">Alimentación</option>
+                                <option value="seguridad">Seguridad</option>
+                                <option value="educacion">Educación</option>
+                                <option value="Musica">Música</option>
+                                <option value="vidente">Adivina</option>
+                                <option value="servicios">Servicios</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left mt-6">
+                            <i class="fas fa-globe"></i>
+                        </div>
                     </div>
-                    <div class="icon is-small is-left mt-6">
-                        <i class="fas fa-globe"></i>
+                    <!-- select de locaciones -->
+                    <div class="control has-icons-left mt-6 pt-6">
+                        <div class="select is-rounded is-small mr-3">
+                            <select name="filter-location" id="locationes">
+                                <option selected>Ubicación</option>
+                                <option value="alimentacion">Alimentación</option>
+                                <option value="seguridad">Seguridad</option>
+                                <option value="educacion">Educación</option>
+                                <option value="Musica">Música</option>
+                                <option value="vidente">Adivina</option>
+                                <option value="servicios">Servicios</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left mt-6">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
                     </div>
-                </div>
-                <!-- select de locaciones -->
-                <div class="control has-icons-left mt-6 pt-6">
-                    <div class="select is-rounded is-small mr-3">
-                        <select name="filter-category" id="category">
-                            <option selected>Ubicación</option>
-                            <option value="alimentacion">Alimentación</option>
-                            <option value="seguridad">Seguridad</option>
-                            <option value="educacion">Educación</option>
-                            <option value="Musica">Música</option>
-                            <option value="vidente">Adivina</option>
-                            <option value="servicios">Servicios</option>
-                        </select>
+                    <!-- select de experiencia -->
+                    <div class="control has-icons-left mt-6 pt-6">
+                        <div class="select is-rounded is-small">
+                            <select name="filter-experience" id="experience">
+                                <option selected>Experiencia</option>
+                                <option value="alimentacion">Alimentación</option>
+                                <option value="seguridad">Seguridad</option>
+                                <option value="educacion">Educación</option>
+                                <option value="Musica">Música</option>
+                                <option value="vidente">Adivina</option>
+                                <option value="servicios">Servicios</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left mt-6">
+                            <i class="fas fa-globe"></i>
+                        </div>
                     </div>
-                    <div class="icon is-small is-left mt-6">
-                        <i class="fa-solid fa-location-dot"></i>
+                    <!-- botones de busqueda y limpiar filtros -->
+                    <div class="mt-6 pt-6 is-grouped">
+                        <button
+                            class="button is-rounded is-success ml-6 is-small"
+                        >
+                            <span>Buscar</span>
+                            <span class="icon is-small">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                        </button>
+                        <button class="button is-rounded is-small is-danger">
+                            <span>Limpiar</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </button>
                     </div>
-                </div>
-                <!-- select de habilidades -->
-                <div class="control has-icons-left mt-6 pt-6">
-                    <div class="select is-rounded is-small">
-                        <select name="filter-category" id="category">
-                            <option selected>Habilidades</option>
-                            <option value="alimentacion">Alimentación</option>
-                            <option value="seguridad">Seguridad</option>
-                            <option value="educacion">Educación</option>
-                            <option value="Musica">Música</option>
-                            <option value="vidente">Adivina</option>
-                            <option value="servicios">Servicios</option>
-                        </select>
-                    </div>
-                    <div class="icon is-small is-left mt-6">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                </div>
-                <!-- botones de busqueda y limpiar filtros -->
-                <div class="mt-6 pt-6 is-grouped">
-                    <button class="button is-rounded is-success ml-6 is-small">
-                        <span>Buscar</span>
-                        <span class="icon is-small">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                    </button>
-                    <button class="button is-rounded is-small is-danger">
-                        <span>Limpiar</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </button>
-                </div>
-            </section>
-        </section>
-        <!-- spinner de carga -->
-        <figure class="has-text-centered mt-6">
-            <img src="./assets/icon-1s-45px.gif" alt="spinner de carga">
-        </figure>
-        <!-- tarjetas de los empleos -->
-        <section class="section is-flex">
-            <section class="columns is-multiline">
-                <section id="cards-container" class="column is-4">
-                    <!-- aca van las cards desde js -->
                 </section>
             </section>
-        </section>
-    </main>
-    <script src="app/api.js"></script>
-    <script src="app/dom.js"></script>
-</body>
-
+            <!-- spinner de carga -->
+            <figure id="spinner" class="has-text-centered mt-6">
+                <img src="./assets/icon-1s-45px.gif" alt="spinner de carga" />
+            </figure>
+            <!-- tarjetas de los empleos -->
+            <section class="section is-flex">
+                <section class="columns is-multiline">
+                    <section id="cards-container" class="column is-4">
+                        <!-- aca van las cards desde js -->
+                    </section>
+                </section>
+            </section>
+            <!-- modal del form -->
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title"></p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="field">
+                            <label class="label">Título</label>
+                            <div class="control">
+                                <input class="input is-black" type="text" placeholder="Título del puesto"/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Descripción</label>
+                            <div class="control">
+                                <input class="input is-black" type="text" placeholder="Descripción del puesto" value=""/>
+                            </div>
+                        </div>
+                        <!-- ubicacion -->
+                        <div class="field">
+                            <label class="label">Ubicación</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select>
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- experiencia -->
+                        <div class="field">
+                            <label class="label">Experiencia</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select>
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- categorias -->
+                        <div class="field">
+                            <label class="label">Categoría</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select>
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- vacaciones -->
+                        <div class="field">
+                            <label class="label">Vacaciones</label>
+                            <div class="control">
+                                <input class="input is-black" type="text" placeholder="Vacaciones" value=""/>
+                            </div>
+                        </div>
+                        <!-- seguro medico -->
+                        <div class="field">
+                            <label class="label">Seguro Médico</label>
+                            <div class="control">
+                                <input class="input is-black" type="text" placeholder="Seguro Médico" value=""/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Salario</label>
+                            <div class="control">
+                                <input class="input is-black" type="text" placeholder="Salario $$" value=""/>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Cupones para canjear por Dumplings o Fideos </label>
+                                <input type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Imágen</label>
+                            <div class="control">
+                                <input class="input is-black" type="url" id="url-image" placeholder="Url de la Imagen" value=""/>
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-success">Agregar</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-danger">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <script src="app/api.js"></script>
+        <script src="app/dom.js"></script>
+    </body>
 </html>
