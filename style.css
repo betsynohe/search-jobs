@@ -2,6 +2,9 @@
  body{
     font-family: 'Julee', cursive;
  }
+ main{
+    background-color: #e6d69e;
+ }
 .banner{
     height: 200px;
     background-image: url(./assets/banner-Kung\ Fu\ Panda.jpg);
@@ -9,4 +12,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
+}
+
+.p-rounded{
+    border-radius: 0.25rem;
 }

@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <!-- navbar header -->
     <header class="is-flex">
         <figure class="ml-6 mt-3 mb-3">
             <img src="./assets/logo-panda.png" width="180" height="180">
@@ -42,8 +43,9 @@
             </section>
         </nav>
     </header>
+    <!-- main -->
     <main>
-        <section class="banner">
+        <section class="field banner">
             <!-- select de categorias -->
             <section class="is-flex is-justify-content-center pt-6">
                 <div class="control has-icons-left mt-6 pt-6">
@@ -96,7 +98,8 @@
                         <i class="fas fa-globe"></i>
                     </div>
                 </div>
-                <div class="mt-6 pt-6 is-danger">
+                <!-- botones de busqueda y limpiar filtros -->
+                <div class="mt-6 pt-6 is-grouped">
                     <button class="button is-rounded is-success ml-6 is-small">
                         <span>Buscar</span>
                         <span class="icon is-small">
@@ -110,7 +113,18 @@
                         </span>
                     </button>
                 </div>
-
+            </section>
+        </section>
+        <!-- spinner de carga -->
+        <figure class="has-text-centered mt-6">
+            <img src="./assets/icon-1s-45px.gif" alt="spinner de carga">
+        </figure>
+        <!-- tarjetas de los empleos -->
+        <section class="section is-flex">
+            <section class="columns is-multiline">
+                <section id="cards-container" class="column is-4">
+                    <!-- aca van las cards desde js -->
+                </section>
             </section>
         </section>
     </main>
