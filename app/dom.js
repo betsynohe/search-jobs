@@ -4,6 +4,7 @@ const $$ = (selector) => document.querySelectorAll(selector)
 const cleanContainer = (selector) => $(selector).innerHTML = '';
 const showElement = (selector) => $(selector).classList.remove("is-hidden")
 const hideElement = (selector) => $(selector).classList.add("is-hidden")
+let isSubmit = false 
 
 // guarda los trabajos
 const saveJob = () => {
@@ -21,6 +22,19 @@ const saveJob = () => {
         salary: $("#job-salary").value,
         experience: $("#job-experience").checked,
     }
+}
+// set form values
+const setFormValues = (job) => {
+    $("#job-title").value = job.name
+    $("#job-description").value = job.description
+    $("#job-location").value = job.ubication
+    $("#job-experience").checked = job.experience
+    $("#job-category").value = job.category
+    $("#job-vacation").value = job.benefits.vacation
+    $("#job-health-insuranse").value = job.benefits.healt_insurance
+    $("#job-lunch").value = job.benefits.food_coupons
+    $("#job-salary").value = job.salary
+    $("#url-image").value = job.image
 }
 
 /* renderiza las tarjetas */
@@ -145,7 +159,17 @@ const renderJobDetails = ({ image, name, description, salary, ubication, experie
                             </div>
                         </div>
             `
-       
+            // edit job
+            $(".btn-edit").addEventListener("click", () => {
+                $("#form").classList.add("is-active")
+                isSubmit = false
+                $("#submit").setAttribute("data-id", id)
+            })
+            // open modal delete
+            $(".btn-delete").addEventListener("click", () => {
+                $("#modal-alert").classList.add("is-active")
+                $("#delete-job").setAttribute("data-id", id)
+            })
     }, 2000)
 }
 

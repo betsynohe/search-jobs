@@ -9,7 +9,21 @@ const getJobs = () =>{
 const getJob = (jobId) =>{
     fetch(`https://6525afdb67cfb1e59ce79be0.mockapi.io/jobs/${jobId}`)
     .then(res => res.json())
-    .then(data => {renderJobDetails(data)})
+    .then(data => {
+        renderJobDetails(data)
+        setFormValues(data)
+    })
 }
+
+// edit job
+const editJob = (jobId) => {
+    fetch(`https://6525afdb67cfb1e59ce79be0.mockapi.io/jobs/${jobId}`, {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(saveJob())
+    }).finally(() => window.location.reload())
+}
+
 getJobs()
-getJob
