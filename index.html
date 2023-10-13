@@ -117,15 +117,13 @@
             </section>
         </section>
         <!-- spinner de carga -->
-        <figure id="spinner" class="has-text-centered mt-6">
+        <figure id="spinner" class="has-text-centered mt-6 is-hidden">
             <img src="./assets/icon-1s-45px.gif" alt="spinner de carga" />
         </figure>
         <!-- tarjetas de los empleos -->
         <section class="section is-flex">
-            <section class="columns is-multiline">
-                <section id="cards-container" class="column is-4">
-                    <!-- aca van las cards desde js -->
-                </section>
+            <section class="columns is-multiline" id="cards-container">
+                <!-- aca van las cards desde js -->
             </section>
         </section>
         <!-- modal del form -->
@@ -140,13 +138,14 @@
                     <div class="field">
                         <label class="label">Título</label>
                         <div class="control">
-                            <input class="input is-black" type="text" placeholder="Título del puesto" />
+                            <input class="input is-black" id="job-title" type="text" placeholder="Título del puesto" />
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Descripción</label>
                         <div class="control">
-                            <input class="input is-black" type="text" placeholder="Descripción del puesto" value="" />
+                            <input class="input is-black" id="job-description" type="text"
+                                placeholder="Descripción del puesto" value="" />
                         </div>
                     </div>
                     <!-- ubicacion -->
@@ -154,7 +153,7 @@
                         <label class="label">Ubicación</label>
                         <div class="control">
                             <div class="select is-black is-fullwidth">
-                                <select>
+                                <select name="filter-location" id="job-location">
                                     <option>Select dropdown</option>
                                     <option>With options</option>
                                 </select>
@@ -166,7 +165,7 @@
                         <label class="label">Experiencia</label>
                         <div class="control">
                             <div class="select is-black is-fullwidth">
-                                <select>
+                                <select name="filter-experience" id="job-experience">
                                     <option>Select dropdown</option>
                                     <option>With options</option>
                                 </select>
@@ -178,7 +177,7 @@
                         <label class="label">Categoría</label>
                         <div class="control">
                             <div class="select is-black is-fullwidth">
-                                <select>
+                                <select name="filter-category" id="job-category">
                                     <option>Select dropdown</option>
                                     <option>With options</option>
                                 </select>
@@ -189,26 +188,29 @@
                     <div class="field">
                         <label class="label">Vacaciones</label>
                         <div class="control">
-                            <input class="input is-black" type="text" placeholder="Vacaciones" value="" />
+                            <input class="input is-black" id="job-vacation" type="text" placeholder="Vacaciones"
+                                value="" />
                         </div>
                     </div>
                     <!-- seguro medico -->
                     <div class="field">
                         <label class="label">Seguro Médico</label>
                         <div class="control">
-                            <input class="input is-black" type="text" placeholder="Seguro Médico" value="" />
+                            <input class="input is-black" id="job-health-insuranse" type="text"
+                                placeholder="Seguro Médico" value="" />
                         </div>
                     </div>
                     <div class="field">
                         <label class="label">Salario</label>
                         <div class="control">
-                            <input class="input is-black" type="text" placeholder="Salario $$" value="" />
+                            <input class="input is-black" id="job-salary" type="number" placeholder="Salario $$"
+                                value="" />
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
                             <label class="label">Cupones para canjear por Dumplings o Fideos</label>
-                            <input type="checkbox" />
+                            <input id="job-lunch" type="checkbox" />
                         </div>
                     </div>
                     <div class="field">
@@ -231,18 +233,30 @@
                 </section>
             </div>
         </div>
+        <!-- tarjeta de la descripcion de los empleos -->
+        <section class="section is-flex is-justify-content-center">
+            <section class="columns is-multiline">
+                <section id="card-description" class="column is-flex is-justify-content-center">
+                    <div class="card container-description">
+                        <!-- aca va las card desde js -->
+                    </div>
+                </section>
+            </section>
+        </section>
         <!-- modal de alerta -->
         <div class="modal">
             <div class="modal-card">
-              <section class="modal-card-body">
-                <p class="title has-text-centered"><strong>¿</strong>Estas de acuerdo en eliminar el puesto de trabajo<strong>?</strong></p>
-                <div class="column is-flex is-justify-content-center mt-3">
-                    <button class="button has-text-black is-success mr-2">Save changes</button>
-                    <button class="button is-danger has-text-black">Cancel</button></div>
-              </div>
-              </section>
+                <section class="modal-card-body">
+                    <p class="title has-text-centered"><strong>¿</strong>Estas de acuerdo en eliminar el puesto de
+                        trabajo<strong>?</strong></p>
+                    <div class="column is-flex is-justify-content-center mt-3">
+                        <button class="button has-text-black is-success mr-2">Save changes</button>
+                        <button class="button is-danger has-text-black">Cancel</button>
+                    </div>
             </div>
-          </div>
+            </section>
+        </div>
+        </div>
     </main>
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>
