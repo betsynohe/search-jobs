@@ -127,14 +127,15 @@
             </section>
         </section>
         <!-- modal del form -->
-        <div class="modal">
+        <div class="modal" id="form">
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
                     <p class="modal-card-title"></p>
                     <button class="delete" aria-label="close"></button>
                 </header>
-                <section class="modal-card-body">
+                <form>
+                    <section class="modal-card-body">
                     <div class="field">
                         <label class="label">Título</label>
                         <div class="control">
@@ -222,36 +223,37 @@
                     </div>
                     <div class="field is-grouped is-flex is-justify-content-center mt-6">
                         <div class="control">
-                            <button class="button is-success">Agregar</button>
+                            <button id="submit" class="button is-success">Agregar</button>
                         </div>
-                        <!-- <div class="control">
+                        <div class="control">
                             <button class="button is-danger">
                                 Cancelar
                             </button>
-                        </div> -->
+                        </div>
                     </div>
                 </section>
+                </form>
             </div>
         </div>
         <!-- tarjeta de la descripcion de los empleos -->
-        <section class="section is-flex is-justify-content-center">
+        <section id="container-description" class="section is-flex is-justify-content-center">
             <section class="columns is-multiline">
-                <section id="card-description" class="column is-flex is-justify-content-center">
-                    <div class="card container-description">
+                <section  class="column is-flex is-justify-content-center">
+                    <div id="card-description" class="card container-description">
                         <!-- aca va las card desde js -->
                     </div>
                 </section>
             </section>
         </section>
         <!-- modal de alerta -->
-        <div class="modal">
+        <div id="modal-alert" class="modal">
             <div class="modal-card">
                 <section class="modal-card-body">
                     <p class="title has-text-centered"><strong>¿</strong>Estas de acuerdo en eliminar el puesto de
                         trabajo<strong>?</strong></p>
                     <div class="column is-flex is-justify-content-center mt-3">
-                        <button class="button has-text-black is-success mr-2">Save changes</button>
-                        <button class="button is-danger has-text-black">Cancel</button>
+                        <button id="delete-job" class="button has-text-black is-success mr-2">Eliminar</button>
+                        <button id="cancel" class="button is-danger has-text-black">Cancelar</button>
                     </div>
             </div>
             </section>
