@@ -50,7 +50,7 @@ const renderJobs = (jobs) => {
                     <div class="card card-media-margin">
                         <div class="card-image">
                             <figure class="image is-3by2">
-                                ${image}
+                            <img src="${image}" alt="${name}">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -65,17 +65,22 @@ const renderJobs = (jobs) => {
                                 <p class="has-text-white has-background-black p-2 p-rounded">${ubication}</p>
                             </div>
                             <div class="content">
-                                <p class="is-size-4">
+                                <p class="is-size-4 container-description">
                                     ${description}
                                 </p>
                             </div>
                         </div>
                         <div class="buttons is-flex is-justify-content-center">
-                            <button class="button is-black" onclick="getJob('${id}')">Más Info</button>
+                            <button class="button is-black see-details-btn" onclick="getJob('${id}')">Más Info</button>
                         </div>
                     </div>
                 </section>
                 `
+                for (const btn of $$(".see-details-btn")){
+                    btn.addEventListener("click" , () => {
+                        hideElement(".banner")
+                    })
+                }
             }
         }, 2000)
     }
@@ -159,17 +164,24 @@ const renderJobDetails = ({ image, name, description, salary, ubication, experie
                             </div>
                         </div>
             `
-            // edit job
-            $(".btn-edit").addEventListener("click", () => {
-                $("#form").classList.add("is-active")
-                isSubmit = false
-                $("#submit").setAttribute("data-id", id)
-            })
-            // open modal delete
-            $(".btn-delete").addEventListener("click", () => {
-                $("#modal-alert").classList.add("is-active")
-                $("#delete-job").setAttribute("data-id", id)
-            })
+            for (const btn of $$(".btn-edit")) {
+                btn.addEventListener("click", () => {
+                    $("#form-add").classList.add("is-active")
+                    hideElement("#add-job-btn")
+                    showElement("#edit-form-btn")
+                    const jobId = btn.getAttribute("data-id")
+                    $("#edit-form-btn").setAttribute("data-id", jobId)
+                    isSubmit = false
+                })
+            } 
+            
+            for (const btn of $$(".btn-delete")){
+                btn.addEventListener("click", () => {
+                    $("#modal-alert").classList.add("is-active")
+                    const jobId = btn.getAttribute("data-id")
+                    $("#delete-job-btn").setAttribute("data-id", jobId)
+                })
+            }
     }, 2000)
 }
 
@@ -181,3 +193,40 @@ const renderBoolean = (value) => {
         return "No"
     }
 }
+
+// FUNCION PARA INICIALIZAR LA APP 
+const initializeApp = () => {
+    // crear job
+$("#btn-create-job").addEventListener("click", () => {
+    $("#form-add").classList.add("is-active")
+    $("#form").reset()
+    isSubmit = true
+})
+    // borrar job
+$("#delete-job-btn").addEventListener("click", () => {
+    const jobId = $("#delete-job-btn").getAttribute("data-id")
+    deleteJob(jobId)
+})
+
+$("#cancel-form").addEventListener("click", () =>{
+    $("#form").classList.remove("is-active")
+})
+
+
+$("#form").addEventListener("submit", (e) => {
+    e.preventDefault()
+    if(isSubmit){
+        addJob()
+        $("#form").reset()
+    } else {
+        const jobId = $("#edit-form-btn").getAttribute("data-id")
+        editJob(jobId)
+    }
+    
+})
+}
+
+window.addEventListener("load", () => {
+    initializeApp()
+    getJobs()
+})

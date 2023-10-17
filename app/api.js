@@ -15,7 +15,7 @@ const getJob = (jobId) =>{
     })
 }
 
-// edit job
+// edita job
 const editJob = (jobId) => {
     fetch(`https://6525afdb67cfb1e59ce79be0.mockapi.io/jobs/${jobId}`, {
         method: "PUT",
@@ -26,4 +26,20 @@ const editJob = (jobId) => {
     }).finally(() => window.location.reload())
 }
 
-getJobs()
+//agrega job
+const addJob = () => {
+    fetch("https://649602f8b08e17c91792f028.mockapi.io/jobs", {
+        method: "POST",     
+        headers: {
+            'Content-Type': 'Application/json'
+        },
+        body: JSON.stringify(saveJob())
+    })
+}
+
+//elimina job
+const deleteJob = (jobId) => {
+    fetch(`https://649602f8b08e17c91792f028.mockapi.io/jobs/${jobId}`, {
+        method: "DELETE"
+    }).finally(() => window.location.reload())
+}

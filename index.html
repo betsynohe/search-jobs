@@ -36,7 +36,7 @@
                         <a href="index.html" class="button">
                             <strong>Home</strong>
                         </a>
-                        <a href="#" class="button">
+                        <a href="#" class="button" id="btn-create-job">
                             <strong>Crear Trabajo</strong>
                         </a>
                     </div>
@@ -127,118 +127,120 @@
             </section>
         </section>
         <!-- modal del form -->
-        <div class="modal" id="form">
+        <div class="modal modal-content-width" id="form-add">
             <div class="modal-background"></div>
-            <div class="modal-card">
-                <header class="modal-card-head">
-                    <p class="modal-card-title"></p>
-                    <button class="delete" aria-label="close"></button>
-                </header>
-                <form>
+            <div class="modal-card modal-scroll">
+                <form id="form">
                     <section class="modal-card-body">
-                    <div class="field">
-                        <label class="label">Título</label>
-                        <div class="control">
-                            <input class="input is-black" id="job-title" type="text" placeholder="Título del puesto" />
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Descripción</label>
-                        <div class="control">
-                            <input class="input is-black" id="job-description" type="text"
-                                placeholder="Descripción del puesto" value="" />
-                        </div>
-                    </div>
-                    <!-- ubicacion -->
-                    <div class="field">
-                        <label class="label">Ubicación</label>
-                        <div class="control">
-                            <div class="select is-black is-fullwidth">
-                                <select name="filter-location" id="job-location">
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
+                        <div class="field">
+                            <label class="label">Título</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-title" type="text"
+                                    placeholder="Título del puesto" />
                             </div>
                         </div>
-                    </div>
-                    <!-- experiencia -->
-                    <div class="field">
-                        <label class="label">Experiencia</label>
-                        <div class="control">
-                            <div class="select is-black is-fullwidth">
-                                <select name="filter-experience" id="job-experience">
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
+                        <div class="field">
+                            <label class="label">Descripción</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-description" type="text"
+                                    placeholder="Descripción del puesto" value="" />
                             </div>
                         </div>
-                    </div>
-                    <!-- categorias -->
-                    <div class="field">
-                        <label class="label">Categoría</label>
-                        <div class="control">
-                            <div class="select is-black is-fullwidth">
-                                <select name="filter-category" id="job-category">
-                                    <option>Select dropdown</option>
-                                    <option>With options</option>
-                                </select>
+                        <!-- ubicacion -->
+                        <div class="field">
+                            <label class="label">Ubicación</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-location" id="job-location">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- vacaciones -->
-                    <div class="field">
-                        <label class="label">Vacaciones</label>
-                        <div class="control">
-                            <input class="input is-black" id="job-vacation" type="text" placeholder="Vacaciones"
-                                value="" />
+                        <!-- experiencia -->
+                        <div class="field">
+                            <label class="label">Experiencia</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-experience" id="job-experience">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- seguro medico -->
-                    <div class="field">
-                        <label class="label">Seguro Médico</label>
-                        <div class="control">
-                            <input class="input is-black" id="job-health-insuranse" type="text"
-                                placeholder="Seguro Médico" value="" />
+                        <!-- categorias -->
+                        <div class="field">
+                            <label class="label">Categoría</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-category" id="job-category">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Salario</label>
-                        <div class="control">
-                            <input class="input is-black" id="job-salary" type="number" placeholder="Salario $$"
-                                value="" />
+                        <!-- vacaciones -->
+                        <div class="field">
+                            <label class="label">Vacaciones</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-vacation" type="text" placeholder="Vacaciones"
+                                    value="" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <label class="label">Cupones para canjear por Dumplings o Fideos</label>
-                            <input id="job-lunch" type="checkbox" />
+                        <!-- seguro medico -->
+                        <div class="field">
+                            <label class="label">Seguro Médico</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-health-insuranse" type="text"
+                                    placeholder="Seguro Médico" value="" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">Imágen</label>
-                        <div class="control">
-                            <input class="input is-black" type="url" id="url-image" placeholder="Url de la Imagen"
-                                value="" />
+                        <div class="field">
+                            <label class="label">Salario</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-salary" type="number" placeholder="Salario $$"
+                                    value="" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="field is-grouped is-flex is-justify-content-center mt-6">
-                        <div class="control">
-                            <button id="submit" class="button is-success">Agregar</button>
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Cupones para canjear por Dumplings o Fideos</label>
+                                <input id="job-lunch" type="checkbox" />
+                            </div>
                         </div>
-                        <div class="control">
-                            <button class="button is-danger">
-                                Cancelar
-                            </button>
+                        <div class="field">
+                            <label class="label">Imágen</label>
+                            <div class="control">
+                                <input class="input is-black" type="url" id="url-image"
+                                    placeholder="Url de la Imagen" />
+                            </div>
                         </div>
-                    </div>
-                </section>
+                        <div class="field is-grouped is-flex is-justify-content-center mt-6">
+                            <div class="control">
+                                <button type="submit" id="add-job-btn" class="button is-success">Agregar</button>
+                            </div>
+                            <div class="control">
+                                <button id="edit-form-btn" class="button is-success is-hidden">
+                                    Editar
+                                </button>
+                            </div>
+                            <div class="control">
+                                <button id="cancel-form" class="button is-danger">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </div>
+                    </section>
                 </form>
             </div>
         </div>
         <!-- tarjeta de la descripcion de los empleos -->
         <section id="container-description" class="section is-flex is-justify-content-center">
             <section class="columns is-multiline">
-                <section  class="column is-flex is-justify-content-center">
+                <section class="column is-flex is-justify-content-center">
                     <div id="card-description" class="card container-description">
                         <!-- aca va las card desde js -->
                     </div>
@@ -253,7 +255,7 @@
                     <p class="title has-text-centered"><strong>¿</strong>Estas de acuerdo en eliminar el puesto de
                         trabajo<strong>?</strong></p>
                     <div class="column is-flex is-justify-content-center mt-3">
-                        <button id="delete-job" class="button has-text-black is-success mr-2">Eliminar</button>
+                        <button id="delete-job-btn" class="button has-text-black is-success mr-2">Eliminar</button>
                         <a href="index.html">
                             <button id="cancel" class="button is-danger has-text-black">Cancelar</button>
                         </a>
