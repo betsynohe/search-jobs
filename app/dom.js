@@ -10,7 +10,8 @@ let isSubmit = false
 const saveJob = () => {
     return {
         name: $("#job-title").value,
-        image: $("#url-image").value,
+        image1: $("#url-image1").value,
+        image2: $("#url-image2").value,
         description: $("#job-description").value,
         category: $("#job-category").value,
         ubication: $("#job-location").value,
@@ -34,7 +35,8 @@ const setFormValues = (job) => {
     $("#job-health-insuranse").value = job.benefits.healt_insurance
     $("#job-lunch").value = job.benefits.food_coupons
     $("#job-salary").value = job.salary
-    $("#url-image").value = job.image
+    $("#url-image1").value = job.image1
+    $("#url-image2").value = job.image2
 }
 
 /* renderiza las tarjetas */
@@ -44,13 +46,14 @@ const renderJobs = (jobs) => {
     if (jobs) {
         setTimeout(() => {
             hideElement("#spinner")
-            for (const { name, image, description, ubication, category, experience, id } of jobs) {
+            for (const { name, image1, image2, description, ubication, category, experience, id } of jobs) {
                 $("#cards-container").innerHTML +=
                     ` <section class="column is-4">
                     <div class="card card-media-margin">
                         <div class="card-image">
-                            <figure class="image is-3by2">
-                            <img src="${image}" alt="${name}">
+                            <figure class="card-img-card image is-3by2">
+                                <img src="${image1}" alt="${name}"/>
+                                <img src="${image2}" alt="${name}" />
                             </figure>
                         </div>
                         <div class="card-content">
@@ -87,12 +90,11 @@ const renderJobs = (jobs) => {
 }
 
 // tarjetas de detalles
-const renderJobDetails = ({ image, name, description, salary, ubication, experience, benefits: { food_coupons, healt_insurance, vacation }, id }) => {
+const renderJobDetails = ({ image1, name, description, salary, ubication, experience, benefits: { food_coupons, healt_insurance, vacation }, id }) => {
     hideElement("#cards-container")
     showElement("#container-description")
     cleanContainer("#card-description")
     showElement("#spinner")
-    console.log(healt_insurance);
     setTimeout(() => {
         hideElement("#spinner")
         $("#card-description").innerHTML += `
@@ -100,7 +102,7 @@ const renderJobDetails = ({ image, name, description, salary, ubication, experie
                             <div class="is-flex column is-multiline is-12">
                                 <div class="column is-4">
                                     <figure class="image is-5by4">
-                                        <img src="${image}" alt="${name}">
+                                        <img src="${image1}" alt="${name}">
                                     </figure>
                                 </div>
                                 <section class="column is-8 is-flex is-flex-direction-column">
@@ -172,6 +174,7 @@ const renderJobDetails = ({ image, name, description, salary, ubication, experie
                     const jobId = btn.getAttribute("data-id")
                     $("#edit-form-btn").setAttribute("data-id", jobId)
                     isSubmit = false
+                    console.log("me ejecute");
                 })
             } 
             
@@ -206,6 +209,7 @@ $("#btn-create-job").addEventListener("click", () => {
 $("#delete-job-btn").addEventListener("click", () => {
     const jobId = $("#delete-job-btn").getAttribute("data-id")
     deleteJob(jobId)
+    console.log("me ejecute");
 })
 
 $("#cancel-form").addEventListener("click", () =>{
@@ -218,6 +222,7 @@ $("#form").addEventListener("submit", (e) => {
     if(isSubmit){
         addJob()
         $("#form").reset()
+        $("#form-add").classList.remove("is-active")
     } else {
         const jobId = $("#edit-form-btn").getAttribute("data-id")
         editJob(jobId)
