@@ -18,10 +18,10 @@ const saveJob = () => {
         benefits: {
             vacation: $("#job-vacation").value,
             healt_insurance: $("#job-health-insuranse").value,
-            food_coupons: $("#job-lunch").value,
+            food_coupons: $("#job-lunch").checked,
         },
         salary: $("#job-salary").value,
-        experience: $("#job-experience").checked,
+        experience: $("#job-experience").value,
     }
 }
 // set form values
@@ -29,11 +29,11 @@ const setFormValues = (job) => {
     $("#job-title").value = job.name
     $("#job-description").value = job.description
     $("#job-location").value = job.ubication
-    $("#job-experience").checked = job.experience
+    $("#job-experience").value = job.experience
     $("#job-category").value = job.category
     $("#job-vacation").value = job.benefits.vacation
     $("#job-health-insuranse").value = job.benefits.healt_insurance
-    $("#job-lunch").value = job.benefits.food_coupons
+    $("#job-lunch").checked = job.benefits.food_coupons
     $("#job-salary").value = job.salary
     $("#url-image1").value = job.image1
     $("#url-image2").value = job.image2
@@ -64,7 +64,7 @@ const renderJobs = (jobs) => {
                             </div>
                             <div class="is-flex is-justify-content-space-around p-3">
                                 <p class="has-text-white has-background-black p-2 p-rounded">${category}</p>
-                                <p class="has-text-white has-background-black p-2 p-rounded">${experience}</p>
+                                <p class="has-text-white has-background-black p-2 p-rounded">${renderBoolean(experience)}</p>
                                 <p class="has-text-white has-background-black p-2 p-rounded">${ubication}</p>
                             </div>
                             <div class="content">
