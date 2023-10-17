@@ -45,7 +45,8 @@
         </nav>
     </header>
     <!-- main -->
-    <main>
+    <main id="main-background">
+        <div class="banner2 is-hidden" id="banner-description"></div>
         <section class="field banner">
             <!-- select de categorias -->
             <section class="is-flex is-justify-content-center pt-6">
@@ -127,6 +128,7 @@
         <!-- modal del form -->
         <div class="modal modal-content-width" id="form-add">
             <div class="modal-background"></div>
+            <button class="delete is-large" id="cancel-form" aria-label="close"></button>
             <div class="modal-card modal-scroll">
                 <form id="form">
                     <section class="modal-card-body">
@@ -242,11 +244,11 @@
                                     Editar
                                 </button>
                             </div>
-                            <div class="control">
+                            <!-- <div class="control">
                                 <button id="cancel-form" class="button is-danger">
                                     Cancelar
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
                     </section>
                 </form>

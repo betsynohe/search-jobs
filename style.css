@@ -2,12 +2,19 @@
  body{
     font-family: 'Julee', cursive;
  }
- main{
-    background-color: #e6d69e;
- }
+
 .banner{
     height: 200px;
     background-image: url(./assets/banner-Kung\ Fu\ Panda.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.banner2{
+    height: 200px;
+    background-image: url(./assets/banner-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

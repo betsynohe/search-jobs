@@ -46,6 +46,7 @@ const renderJobs = (jobs) => {
     if (jobs) {
         setTimeout(() => {
             hideElement("#spinner")
+            $("#main-background").style.backgroundColor="#e6d69e"
             for (const { name, image1, image2, description, ubication, category, experience, id } of jobs) {
                 $("#cards-container").innerHTML +=
                     ` <section class="column is-4">
@@ -62,10 +63,10 @@ const renderJobs = (jobs) => {
                                     <p class="title is-2">${name}</p>
                                 </div>
                             </div>
-                            <div class="is-flex is-justify-content-space-around p-3">
-                                <p class="has-text-white has-background-black p-2 p-rounded">${category}</p>
-                                <p class="has-text-white has-background-black p-2 p-rounded">${renderBoolean(experience)}</p>
-                                <p class="has-text-white has-background-black p-2 p-rounded">${ubication}</p>
+                            <div class="is-size-5-desktop p-3">
+                                <p class:"p-2"><spam class="has-text-weight-bold">Categoría:</spam> ${category}</p>
+                                <p class:"p-2"><spam class="has-text-weight-bold">Experiencia:</spam> ${experience}</p>
+                                <p class:"p-2"><spam class="has-text-weight-bold">Ubicación:</spam> ${ubication}</p>
                             </div>
                             <div class="content">
                                 <p class="is-size-4 container-description">
@@ -82,6 +83,7 @@ const renderJobs = (jobs) => {
                 for (const btn of $$(".see-details-btn")){
                     btn.addEventListener("click" , () => {
                         hideElement(".banner")
+                        showElement("#banner-description")
                     })
                 }
             }
@@ -174,7 +176,6 @@ const renderJobDetails = ({ image1, name, description, salary, ubication, experi
                     const jobId = btn.getAttribute("data-id")
                     $("#edit-form-btn").setAttribute("data-id", jobId)
                     isSubmit = false
-                    console.log("me ejecute");
                 })
             } 
             
@@ -209,11 +210,11 @@ $("#btn-create-job").addEventListener("click", () => {
 $("#delete-job-btn").addEventListener("click", () => {
     const jobId = $("#delete-job-btn").getAttribute("data-id")
     deleteJob(jobId)
-    console.log("me ejecute");
 })
 
 $("#cancel-form").addEventListener("click", () =>{
-    $("#form").classList.remove("is-active")
+    $("#form-add").classList.remove("is-active")
+    showElement("#cards-container")
 })
 
 
