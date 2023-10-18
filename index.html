@@ -47,28 +47,28 @@
     <!-- main -->
     <main id="main-background">
         <div class="banner2 is-hidden" id="banner-description"></div>
-        <section class="field banner">
+        <section class="banner is-flex is-flex-direction-column">
             <!-- select de categorias -->
-            <section class="is-flex is-justify-content-center pt-6">
-                <div class="control has-icons-left mt-6 pt-6">
-                    <div class="select is-rounded is-small mr-3">
+            <section class="is-mobile is-flex is-flex-wrap-wrap is-justify-content-center pt-6">
+                <div class="control columns is-desktop has-icons-left ml-6 mr-4">
+                    <div class="select is-rounded is-small ">
                         <select name="filter-category" id="category">
                             <option selected>Categorías</option>
-                            <option value="alimentacion">Alimentación</option>
-                            <option value="seguridad">Seguridad</option>
-                            <option value="educacion">Educación</option>
+                            <option value="Alimentacion">Alimentación</option>
+                            <option value="Seguridad">Seguridad</option>
+                            <option value="Educacion">Educación</option>
                             <option value="Musica">Música</option>
-                            <option value="vidente">Vidente</option>
-                            <option value="servicios">Servicios</option>
+                            <option value="Vidente">Vidente</option>
+                            <option value="Servicios">Servicios</option>
                         </select>
                     </div>
-                    <div class="icon is-small is-left mt-6">
+                    <div class="icon is-small is-left">
                         <i class="fas fa-globe"></i>
                     </div>
                 </div>
                 <!-- select de locaciones -->
-                <div class="control has-icons-left mt-6 pt-6">
-                    <div class="select is-rounded is-small mr-3">
+                <div class="control columns is-desktop has-icons-left mr-4">
+                    <div class="select is-rounded is-small">
                         <select name="filter-location" id="locationes">
                             <option selected>Ubicación</option>
                             <option value="Valle de la Paz">Valle de la Paz</option>
@@ -81,12 +81,12 @@
                             <option value="Mercado de Moshu">Mercado de Moshu</option>
                         </select>
                     </div>
-                    <div class="icon is-small is-left mt-6">
+                    <div class="icon is-small is-left">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                 </div>
                 <!-- select de experiencia -->
-                <div class="control has-icons-left mt-6 pt-6">
+                <div class="control columns is-desktop  has-icons-left mr-4">
                     <div class="select is-rounded is-small">
                         <select name="filter-experience" id="experience">
                             <option selected>Experiencia</option>
@@ -94,26 +94,26 @@
                             <option value="No">No</option>
                         </select>
                     </div>
-                    <div class="icon is-small is-left mt-6">
+                    <div class="icon is-small is-left">
                         <i class="fas fa-globe"></i>
                     </div>
                 </div>
-                <!-- botones de busqueda y limpiar filtros -->
-                <div class="mt-6 pt-6 is-grouped">
-                    <button class="button is-rounded is-success ml-6 is-small">
-                        <span>Buscar</span>
-                        <span class="icon is-small">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                    </button>
-                    <button class="button is-rounded is-small is-danger">
-                        <span>Limpiar</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </button>
-                </div>
             </section>
+            <!-- botones de busqueda y limpiar filtros -->
+            <div class="is-grouped is-flex is-justify-content-center mt-4">
+                <button class="button is-rounded is-success mr-2 is-small is-responsive">
+                    <span>Buscar</span>
+                    <span class="icon is-small">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </button>
+                <button class="button is-rounded is-small is-danger is-responsive">
+                    <span>Limpiar</span>
+                    <span class="icon is-small">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+            </div>
         </section>
         <!-- spinner de carga -->
         <figure id="spinner" class="has-text-centered mt-6 is-hidden">
