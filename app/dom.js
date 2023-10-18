@@ -134,7 +134,7 @@ const renderJobDetails = ({ image1, name, description, salary, ubication, experi
                                 </section>
                                 <section class="column is-6 is-right">
                                     <div class="is-flex">
-                                        <img class=" mr-3 image is-64x64" src="./assets/icons8-to-do-list-68.png"
+                                        <img class=" mr-3 image is-64x64" src="./assets/icons8-requisito-64.png"
                                             alt="pergamino icon">
                                         <p class="title is-size-2-tablet">Requisitos</p>
                                     </div>
