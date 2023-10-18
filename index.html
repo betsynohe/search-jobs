@@ -1,23 +1,272 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- link google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
- <!-- link para los iconos-->
- <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
- <!-- favicon -->
- <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-<!-- bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- link para los iconos-->
+    <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <!-- link google font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet"> -->
+    <!-- estilo de la pagina -->
+    <link rel="stylesheet" href="style.css" />
     <title>Jobs Panda</title>
 </head>
+
 <body>
-    
+    <!-- navbar header -->
+    <header class="is-flex">
+        <figure class="ml-6 mt-3 mb-3">
+            <img src="./assets/logo-panda.png" width="180" height="180" />
+        </figure>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <h1 class="title has-text-centered m-6 is-size-4-touch">
+                Trabajá con nosotros para proteger el Valle de la Paz
+            </h1>
+            <section class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons mr-6">
+                        <a href="index.html" class="button">
+                            <strong>Home</strong>
+                        </a>
+                        <a href="#" class="button" id="btn-create-job">
+                            <strong>Crear Trabajo</strong>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <!-- main -->
+    <main>
+        <section class="field banner">
+            <!-- select de categorias -->
+            <section class="is-flex is-justify-content-center pt-6">
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small mr-3">
+                        <select name="filter-category" id="category">
+                            <option selected>Categorías</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <!-- select de locaciones -->
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small mr-3">
+                        <select name="filter-location" id="locationes">
+                            <option selected>Ubicación</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
+                <!-- select de experiencia -->
+                <div class="control has-icons-left mt-6 pt-6">
+                    <div class="select is-rounded is-small">
+                        <select name="filter-experience" id="experience">
+                            <option selected>Experiencia</option>
+                            <option value="alimentacion">Alimentación</option>
+                            <option value="seguridad">Seguridad</option>
+                            <option value="educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="vidente">Adivina</option>
+                            <option value="servicios">Servicios</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left mt-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <!-- botones de busqueda y limpiar filtros -->
+                <div class="mt-6 pt-6 is-grouped">
+                    <button class="button is-rounded is-success ml-6 is-small">
+                        <span>Buscar</span>
+                        <span class="icon is-small">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </button>
+                    <button class="button is-rounded is-small is-danger">
+                        <span>Limpiar</span>
+                        <span class="icon is-small">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </button>
+                </div>
+            </section>
+        </section>
+        <!-- spinner de carga -->
+        <figure id="spinner" class="has-text-centered mt-6 is-hidden">
+            <img src="./assets/icon-1s-45px.gif" alt="spinner de carga" />
+        </figure>
+        <!-- tarjetas de los empleos -->
+        <section class="section is-flex">
+            <section class="columns is-multiline" id="cards-container">
+                <!-- aca van las cards desde js -->
+            </section>
+        </section>
+        <!-- modal del form -->
+        <div class="modal modal-content-width" id="form-add">
+            <div class="modal-background"></div>
+            <div class="modal-card modal-scroll">
+                <form id="form">
+                    <section class="modal-card-body">
+                        <div class="field">
+                            <label class="label">Título</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-title" type="text"
+                                    placeholder="Título del puesto" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Descripción</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-description" type="text"
+                                    placeholder="Descripción del puesto" value="" />
+                            </div>
+                        </div>
+                        <!-- ubicacion -->
+                        <div class="field">
+                            <label class="label">Ubicación</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-location" id="job-location">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- experiencia -->
+                        <div class="field">
+                            <label class="label">Experiencia</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-experience" id="job-experience">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- categorias -->
+                        <div class="field">
+                            <label class="label">Categoría</label>
+                            <div class="control">
+                                <div class="select is-black is-fullwidth">
+                                    <select name="filter-category" id="job-category">
+                                        <option>Select dropdown</option>
+                                        <option>With options</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- vacaciones -->
+                        <div class="field">
+                            <label class="label">Vacaciones</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-vacation" type="text" placeholder="Vacaciones"
+                                    value="" />
+                            </div>
+                        </div>
+                        <!-- seguro medico -->
+                        <div class="field">
+                            <label class="label">Seguro Médico</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-health-insuranse" type="text"
+                                    placeholder="Seguro Médico" value="" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Salario</label>
+                            <div class="control">
+                                <input class="input is-black" id="job-salary" type="number" placeholder="Salario $$"
+                                    value="" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Cupones para canjear por Dumplings o Fideos</label>
+                                <input id="job-lunch" type="checkbox" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Imágen</label>
+                            <div class="control">
+                                <input class="input is-black" type="url" id="url-image"
+                                    placeholder="Url de la Imagen" />
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-flex is-justify-content-center mt-6">
+                            <div class="control">
+                                <button type="submit" id="add-job-btn" class="button is-success">Agregar</button>
+                            </div>
+                            <div class="control">
+                                <button id="edit-form-btn" class="button is-success is-hidden">
+                                    Editar
+                                </button>
+                            </div>
+                            <div class="control">
+                                <button id="cancel-form" class="button is-danger">
+                                    Cancelar
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+        <!-- tarjeta de la descripcion de los empleos -->
+        <section id="container-description" class="section is-flex is-justify-content-center">
+            <section class="columns is-multiline">
+                <section class="column is-flex is-justify-content-center">
+                    <div id="card-description" class="card container-description">
+                        <!-- aca va las card desde js -->
+                    </div>
+                </section>
+            </section>
+        </section>
+        <!-- modal de alerta -->
+        <div id="modal-alert" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <section class="modal-card-body">
+                    <p class="title has-text-centered"><strong>¿</strong>Estas de acuerdo en eliminar el puesto de
+                        trabajo<strong>?</strong></p>
+                    <div class="column is-flex is-justify-content-center mt-3">
+                        <button id="delete-job-btn" class="button has-text-black is-success mr-2">Eliminar</button>
+                        <a href="index.html">
+                            <button id="cancel" class="button is-danger has-text-black">Cancelar</button>
+                        </a>
+                    </div>
+            </div>
+            </section>
+        </div>
+        </div>
+    </main>
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>
 </body>
+
 </html>
