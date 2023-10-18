@@ -65,7 +65,7 @@ const renderJobs = (jobs) => {
                             </div>
                             <div class="is-size-5-desktop p-3">
                                 <p class:"p-2"><spam class="has-text-weight-bold">Categoría:</spam> ${category}</p>
-                                <p class:"p-2"><spam class="has-text-weight-bold">Experiencia:</spam> ${experience}</p>
+                                <p class:"p-2"><spam class="has-text-weight-bold">Experiencia:</spam> ${renderBoolean(experience)}</p>
                                 <p class:"p-2"><spam class="has-text-weight-bold">Ubicación:</spam> ${ubication}</p>
                             </div>
                             <div class="content">
@@ -217,7 +217,6 @@ $("#cancel-form").addEventListener("click", () =>{
     showElement("#cards-container")
 })
 
-
 $("#form").addEventListener("submit", (e) => {
     e.preventDefault()
     if(isSubmit){
@@ -228,7 +227,36 @@ $("#form").addEventListener("submit", (e) => {
         const jobId = $("#edit-form-btn").getAttribute("data-id")
         editJob(jobId)
     }
-    
+})
+// search
+$("#search-btn").addEventListener("click", () =>{
+    const ubication = $("#locationes").value
+    const experience = $("#experience").value
+    const category = $("#category").value
+    getJobs(ubication, experience, category)
+    console.log(category);
+})
+
+$("#category").addEventListener("change", () => {
+    $("#locationes").value = ""
+    $("#experience").value = ""
+})
+
+$("#locationes").addEventListener("change", () => {
+    $("#category").value = ""
+    $("#experience").value = ""
+})
+
+$("#experience").addEventListener("change", () => {
+    $("#locationes").value = ""
+    $("#category").value = ""
+})
+//resetea el filtro
+$("#reset-btn").addEventListener("click", () => {
+    $("#locationes").value = ""
+    $("#category").value = ""
+    $("#experience").value = ""
+    getJobs()
 })
 }
 

@@ -1,8 +1,18 @@
 // get jobs
-const getJobs = () =>{
-    fetch(`https://6525afdb67cfb1e59ce79be0.mockapi.io/jobs`)
+const getJobs = (ubication = "", experience = "", category = "") =>{
+    const search =
+        ubication !== ""
+        ? `?ubication=${ubication}`
+        : category !== ""
+        ? `?category=${category}`
+        : experience !== ""
+        ? `?experience=${experience}`
+        : ""
+    fetch(`https://6525afdb67cfb1e59ce79be0.mockapi.io/jobs${search}`)
     .then(res => res.json())
-    .then(data => {renderJobs(data)})
+    .then(data => {
+        renderJobs(data)
+    })
 }
 
 // get job

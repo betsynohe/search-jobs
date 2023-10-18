@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- link para los iconos-->
-    <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
-    <!-- bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <!-- link google font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet"> -->
-    <!-- estilo de la pagina -->
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- link google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
+ <!-- link para los iconos-->
+ <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
+ <!-- favicon -->
+ <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+<!-- bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Jobs Panda</title>
 </head>
-
 <body>
     <!-- navbar header -->
     <header class="is-flex">
@@ -70,7 +65,7 @@
                 <div class="control columns is-desktop has-icons-left mr-4">
                     <div class="select is-rounded is-small">
                         <select name="filter-location" id="locationes">
-                            <option selected>Ubicación</option>
+                            <option value=""selected>Ubicación</option>
                             <option value="Valle de la Paz">Valle de la Paz</option>
                             <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
                             <option value="Tienda de Fideos">Tienda de Fideos</option>
@@ -79,6 +74,8 @@
                             <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
                             <option value="Aldea de Pandas">Aldea de Pandas</option>
                             <option value="Mercado de Moshu">Mercado de Moshu</option>
+                            <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                            <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
                         </select>
                     </div>
                     <div class="icon is-small is-left">
@@ -89,7 +86,7 @@
                 <div class="control columns is-desktop  has-icons-left mr-4">
                     <div class="select is-rounded is-small">
                         <select name="filter-experience" id="experience">
-                            <option selected>Experiencia</option>
+                            <option value=""selected>Experiencia</option>
                             <option value="Si">Sí</option>
                             <option value="No">No</option>
                         </select>
@@ -159,7 +156,9 @@
                                         <option value="Palacio de Jade">Palacio de Jade</option>
                                         <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
                                         <option value="Aldea de Pandas">Aldea de Pandas</option>
-                                        <option value="Mercado de Moshu">Mercado de Moshu</option>n>
+                                        <option value="Mercado de Moshu">Mercado de Moshu</option>
+                                        <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                                        <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
                                     </select>
                                 </div>
                             </div>
@@ -182,12 +181,12 @@
                             <div class="control">
                                 <div class="select is-black is-fullwidth">
                                     <select name="filter-category" id="job-category">
-                                        <option value="alimentacion">Alimentación</option>
-                                        <option value="seguridad">Seguridad</option>
-                                        <option value="educacion">Educación</option>
+                                        <option value="Alimentacion">Alimentación</option>
+                                        <option value="Seguridad">Seguridad</option>
+                                        <option value="Educacion">Educación</option>
                                         <option value="Musica">Música</option>
-                                        <option value="vidente">Vidente</option>
-                                        <option value="servicios">Servicios</option>
+                                        <option value="Vidente">Vidente</option>
+                                        <option value="Servicios">Servicios</option>
                                     </select>
                                 </div>
                             </div>
@@ -285,5 +284,4 @@
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>
 </body>
-
 </html>
