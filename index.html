@@ -53,13 +53,13 @@
                 <div class="control has-icons-left mt-6 pt-6">
                     <div class="select is-rounded is-small mr-3">
                         <select name="filter-category" id="category">
-                            <option selected>Categorías</option>
-                            <option value="alimentacion">Alimentación</option>
-                            <option value="seguridad">Seguridad</option>
-                            <option value="educacion">Educación</option>
+                            <option value=""selected>Categoria</option>
+                            <option value="Alimentacion">Alimentación</option>
+                            <option value="Seguridad">Seguridad</option>
+                            <option value="Educacion">Educación</option>
                             <option value="Musica">Música</option>
-                            <option value="vidente">Vidente</option>
-                            <option value="servicios">Servicios</option>
+                            <option value="Vidente">Vidente</option>
+                            <option value="Servicios">Servicios</option>
                         </select>
                     </div>
                     <div class="icon is-small is-left mt-6">
@@ -70,7 +70,7 @@
                 <div class="control has-icons-left mt-6 pt-6">
                     <div class="select is-rounded is-small mr-3">
                         <select name="filter-location" id="locationes">
-                            <option selected>Ubicación</option>
+                            <option value=""selected>Ubicación</option>
                             <option value="Valle de la Paz">Valle de la Paz</option>
                             <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
                             <option value="Tienda de Fideos">Tienda de Fideos</option>
@@ -79,6 +79,8 @@
                             <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
                             <option value="Aldea de Pandas">Aldea de Pandas</option>
                             <option value="Mercado de Moshu">Mercado de Moshu</option>
+                            <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                            <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
                         </select>
                     </div>
                     <div class="icon is-small is-left mt-6">
@@ -89,7 +91,7 @@
                 <div class="control has-icons-left mt-6 pt-6">
                     <div class="select is-rounded is-small">
                         <select name="filter-experience" id="experience">
-                            <option selected>Experiencia</option>
+                            <option value=""selected>Experiencia</option>
                             <option value="Si">Sí</option>
                             <option value="No">No</option>
                         </select>
@@ -100,13 +102,13 @@
                 </div>
                 <!-- botones de busqueda y limpiar filtros -->
                 <div class="mt-6 pt-6 is-grouped">
-                    <button class="button is-rounded is-success ml-6 is-small">
+                    <button id="search-btn" class="button is-rounded is-success ml-6 is-small">
                         <span>Buscar</span>
                         <span class="icon is-small">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
                     </button>
-                    <button class="button is-rounded is-small is-danger">
+                    <button id="reset-btn" class="button is-rounded is-small is-danger">
                         <span>Limpiar</span>
                         <span class="icon is-small">
                             <i class="fas fa-times"></i>
@@ -159,7 +161,9 @@
                                         <option value="Palacio de Jade">Palacio de Jade</option>
                                         <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
                                         <option value="Aldea de Pandas">Aldea de Pandas</option>
-                                        <option value="Mercado de Moshu">Mercado de Moshu</option>n>
+                                        <option value="Mercado de Moshu">Mercado de Moshu</option>
+                                        <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                                        <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
                                     </select>
                                 </div>
                             </div>
@@ -182,12 +186,12 @@
                             <div class="control">
                                 <div class="select is-black is-fullwidth">
                                     <select name="filter-category" id="job-category">
-                                        <option value="alimentacion">Alimentación</option>
-                                        <option value="seguridad">Seguridad</option>
-                                        <option value="educacion">Educación</option>
+                                        <option value="Alimentacion">Alimentación</option>
+                                        <option value="Seguridad">Seguridad</option>
+                                        <option value="Educacion">Educación</option>
                                         <option value="Musica">Música</option>
-                                        <option value="vidente">Vidente</option>
-                                        <option value="servicios">Servicios</option>
+                                        <option value="Vidente">Vidente</option>
+                                        <option value="Servicios">Servicios</option>
                                     </select>
                                 </div>
                             </div>
