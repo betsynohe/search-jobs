@@ -19,6 +19,10 @@
     background-attachment: fixed;
 }
 
+.nav-title{
+    width: 100%;
+}
+
 .p-rounded{
     border-radius: 0.25rem;
 }
@@ -88,5 +92,33 @@
 .card-img-card:hover img:last-child{
     opacity: 1;
     transform: translateY(10%);
+}
 
+/* medias queryes */
+
+/* mobile */
+@media (max-width: 760px) {
+    .nav-title{
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .img-logo{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        width: 50%;
+        margin-left: 0 !important;
+    }
+    
+    .title-h1 {
+        margin-top: 0 !important; 
+        margin-bottom: 0 !important;
+        width: 60%;
+        text-align: center !important;
+    }
+    
+    .buttons-nav{
+        margin-bottom: 5px !important;
+    }
 }

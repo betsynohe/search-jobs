@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- link google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
- <!-- link para los iconos-->
- <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
- <!-- favicon -->
- <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-<!-- bulma -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-<link rel="stylesheet" href="style.css">
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Julee&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <!-- link para los iconos-->
+    <script src="https://kit.fontawesome.com/d2f0778e32.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Jobs Panda</title>
 </head>
+
 <body>
     <!-- navbar header -->
     <header class="is-flex">
-        <figure class="ml-6 mt-3 mb-3">
-            <img src="./assets/logo-panda.png" width="180" height="180" />
-        </figure>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <h1 class="title has-text-centered m-6 is-size-4-touch">
+        <nav class="columns is-multiline is-mobile is-flex nav-title" role="navigation" aria-label="main navigation">
+            <figure class="column ml-6 mt-3 img-logo">
+                <img src="./assets/logo-panda.png" width="180" height="180" />
+            </figure>
+            <h1 class="title column has-text-centered has-text-left-mobile mt-6 is-size-6-mobile title-h1">
                 Trabajá con nosotros para proteger el Valle de la Paz
             </h1>
-            <section class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons mr-6">
-                        <a href="index.html" class="button">
-                            <strong>Home</strong>
-                        </a>
-                        <a href="#" class="button" id="btn-create-job">
-                            <strong>Crear Trabajo</strong>
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <div class="buttons column is-flex is-justify-content-center buttons-nav">
+                <a href="index.html" class="button is-responsive">
+                    <strong>Home</strong>
+                </a>
+                <a href="#" class="button is-responsive" id="btn-create-job">
+                    <strong>Crear Trabajo</strong>
+                </a>
+            </div>
         </nav>
     </header>
     <!-- main -->
@@ -47,57 +47,57 @@
             <!-- select de categorias -->
             <section>
                 <section class="is-mobile is-flex is-flex-wrap-wrap is-justify-content-center pt-6">
-                <div class="control columns is-desktop has-icons-left ml-6 mr-4">
-                    <div class="select is-rounded is-small ">
-                        <select name="filter-category" id="category">
-                            <option value="" selected>Categoria</option>
-                            <option value="Alimentacion">Alimentación</option>
-                            <option value="Seguridad">Seguridad</option>
-                            <option value="Educacion">Educación</option>
-                            <option value="Musica">Música</option>
-                            <option value="Vidente">Vidente</option>
-                            <option value="Servicios">Servicios</option>
-                        </select>
+                    <div class="control columns is-desktop has-icons-left ml-6 mr-4">
+                        <div class="select is-rounded is-small ">
+                            <select name="filter-category" id="category">
+                                <option value="" selected>Categoria</option>
+                                <option value="Alimentacion">Alimentación</option>
+                                <option value="Seguridad">Seguridad</option>
+                                <option value="Educacion">Educación</option>
+                                <option value="Musica">Música</option>
+                                <option value="Vidente">Vidente</option>
+                                <option value="Servicios">Servicios</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-globe"></i>
+                        </div>
                     </div>
-                    <div class="icon is-small is-left">
-                        <i class="fas fa-globe"></i>
+                    <!-- select de locaciones -->
+                    <div class="control columns is-desktop has-icons-left mr-4">
+                        <div class="select is-rounded is-small">
+                            <select name="filter-location" id="locationes">
+                                <option value="" selected>Ubicación</option>
+                                <option value="Valle de la Paz">Valle de la Paz</option>
+                                <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
+                                <option value="Tienda de Fideos">Tienda de Fideos</option>
+                                <option value="Villa de los Artesanos">Villa de los Artesanos</option>
+                                <option value="Palacio de Jade">Palacio de Jade</option>
+                                <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
+                                <option value="Aldea de Pandas">Aldea de Pandas</option>
+                                <option value="Mercado de Moshu">Mercado de Moshu</option>
+                                <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                                <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
                     </div>
-                </div>
-                <!-- select de locaciones -->
-                <div class="control columns is-desktop has-icons-left mr-4">
-                    <div class="select is-rounded is-small">
-                        <select name="filter-location" id="locationes">
-                            <option value="" selected>Ubicación</option>
-                            <option value="Valle de la Paz">Valle de la Paz</option>
-                            <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
-                            <option value="Tienda de Fideos">Tienda de Fideos</option>
-                            <option value="Villa de los Artesanos">Villa de los Artesanos</option>
-                            <option value="Palacio de Jade">Palacio de Jade</option>
-                            <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
-                            <option value="Aldea de Pandas">Aldea de Pandas</option>
-                            <option value="Mercado de Moshu">Mercado de Moshu</option>
-                            <option value="Prisión de Gongmen">Prisión de Gongmen</option>
-                            <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
-                        </select>
+                    <!-- select de experiencia -->
+                    <div class="control columns is-desktop has-icons-left mr-4">
+                        <div class="select is-rounded is-small">
+                            <select name="filter-experience" id="experience">
+                                <option value="" selected>Experiencia</option>
+                                <option value="Si">Sí</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-globe"></i>
+                        </div>
                     </div>
-                    <div class="icon is-small is-left">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                </div>
-                <!-- select de experiencia -->
-                <div class="control columns is-desktop has-icons-left mr-4">
-                    <div class="select is-rounded is-small">
-                        <select name="filter-experience" id="experience">
-                            <option value="" selected>Experiencia</option>
-                            <option value="Si">Sí</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
-                    <div class="icon is-small is-left">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                </div>
-            </section>
+                </section>
                 <!-- botones de busqueda y limpiar filtros -->
                 <div class="is-flex is-justify-content-center is-grouped">
                     <button id="search-btn" class="button is-rounded is-success mr-3 ml-6 is-small">
@@ -287,4 +287,5 @@
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>
 </body>
+
 </html>
