@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
- body{
+body{
     font-family: 'Julee', cursive;
-    background-color: rgb(142, 181, 69);
- }
+   /*  background-color: rgb(142, 181, 69); */
+}
+
+.btn-nav{
+    background-color: #4c8d4b;
+}
+
+.btn-nav:hover{
+    background-color: black;
+    
+}
 
 .banner{
     height: 200px;
@@ -108,16 +117,14 @@
         display: flex;
         align-self: center;
         justify-content: center;
-        width: 50%;
+        width: 30%;
         margin-left: 0 !important;
     }
     
     .title-h1 {
         margin-top: 0 !important; 
         margin-bottom: 0 !important;
-        width: 60%;
-        text-align: center !important;
-        font-size: 20px !important;
+        width: 100% !important;
     }
     
     .buttons-nav{

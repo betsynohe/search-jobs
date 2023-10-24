@@ -46,7 +46,7 @@ const renderJobs = (jobs) => {
     if (jobs) {
         setTimeout(() => {
             hideElement("#spinner")
-            /* $("#main-background").style.backgroundColor="#8eb545" */
+            $("#main-background").style.backgroundColor="#4c8d4b"
             for (const { name, image1, image2, description, ubication, category, experience, id } of jobs) {
                 $("#cards-container").innerHTML +=
                     ` <section class="column is-4">
