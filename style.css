@@ -27,7 +27,7 @@
 .p-rounded{
     border-radius: 0.25rem;
 }
-.container-description{
+.container-description-card{
     width: 80%;
 }
 
@@ -136,6 +136,14 @@
 
     .container-card-description{
         flex-direction: column;
+    }
+
+    .info-description{
+        flex-direction: column;
+    }
+    .icon-description{
+        width: 48px;
+        height: 48px;
     }
 }
 
