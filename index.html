@@ -45,37 +45,37 @@
         <div class="segundo-banner is-hidden" id="banner-description"></div>
         <section class="banner is-flex is-flex-direction-column">
             <!-- select de categorias -->
-                <section class="is-flex is-justify-content-center pt-6 container-selects">
-                    <div class="control has-icons-left ml-6 mr-4">
-                        <div class="select is-rounded is-small ">
-                            <select name="filter-category" id="category">
-                                <option value="" selected>Categoria</option>
-                                <option value="Alimentacion">Alimentación</option>
-                                <option value="Seguridad">Seguridad</option>
-                                <option value="Educacion">Educación</option>
-                                <option value="Musica">Música</option>
-                                <option value="Vidente">Vidente</option>
-                                <option value="Servicios">Servicios</option>
-                            </select>
-                        </div>
-                        <div class="icon is-small is-left">
-                            <i class="fas fa-globe"></i>
-                        </div>
+            <section class="is-flex is-justify-content-center pt-6 container-selects">
+                <div class="control has-icons-left ml-6 mr-4">
+                    <div class="select is-rounded is-small ">
+                        <select name="filter-category" id="category">
+                            <option value="" selected>Categoria</option>
+                            <option value="Alimentacion">Alimentación</option>
+                            <option value="Seguridad">Seguridad</option>
+                            <option value="Educacion">Educación</option>
+                            <option value="Musica">Música</option>
+                            <option value="Vidente">Vidente</option>
+                            <option value="Servicios">Servicios</option>
+                        </select>
                     </div>
-                    <!-- select de experiencia -->
-                    <div class="control has-icons-left mr-4 select-select">
-                        <div class="select is-rounded is-small">
-                            <select name="filter-experience" id="experience">
-                                <option value="" selected>Experiencia</option>
-                                <option value="Si">Sí</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-                        <div class="icon is-small is-left">
-                            <i class="fas fa-globe"></i>
-                        </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-globe"></i>
                     </div>
-                    <!-- select de locaciones -->
+                </div>
+                <!-- select de experiencia -->
+                <div class="control has-icons-left mr-4 select-select">
+                    <div class="select is-rounded is-small">
+                        <select name="filter-experience" id="experience">
+                            <option value="" selected>Experiencia</option>
+                            <option value="Si">Sí</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <!-- select de locaciones -->
                 <div class="control has-icons-left mr-4 select-select">
                     <div class="select is-rounded is-small">
                         <select name="filter-location" id="locationes">
@@ -96,22 +96,22 @@
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                 </div>
-                </section>
-                <!-- botones de busqueda y limpiar filtros -->
-                <div class="is-flex is-justify-content-center mt-3 is-grouped container-buttons">
-                    <button id="search-btn" class="button is-rounded is-success mr-3 ml-6 is-small">
-                        <span>Buscar</span>
-                        <span class="icon is-small">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                    </button>
-                    <button id="reset-btn" class="button is-rounded is-small is-danger">
-                        <span>Limpiar</span>
-                        <span class="icon is-small">
-                            <i class="fas fa-times"></i>
-                        </span>
-                    </button>
-                </div>
+            </section>
+            <!-- botones de busqueda y limpiar filtros -->
+            <div class="is-flex is-justify-content-center mt-3 is-grouped container-buttons">
+                <button id="search-btn" class="button is-rounded is-success mr-3 ml-6 is-small">
+                    <span>Buscar</span>
+                    <span class="icon is-small">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </button>
+                <button id="reset-btn" class="button is-rounded is-small is-danger">
+                    <span>Limpiar</span>
+                    <span class="icon is-small">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+            </div>
         </section>
         <!-- spinner de carga -->
         <figure id="spinner" class="has-text-centered mt-6 is-hidden">
@@ -282,6 +282,19 @@
         </div>
         </div>
     </main>
+    <footer class="has-background-black">
+        <div class="content has-text-centered">
+            <p class="has-text-white is-size-4 is-size-5-mobile pt-3">
+                Hecho con  <i class="fa-solid fa-heart" style="color: #fafafa;"></i> por Betsy Guitian.
+            </p>
+            <p class="content has-text-centered is-size-4 is-size-5-mobile pb-3">
+                <i class="fa-brands fa-linkedin" style="color: #f7f7f7;"></i>
+                <a href="www.linkedin.com/in/betsy-guitian-b36b06242" target="_blank"> LinkedIn</a>
+                <i class="fa-brands fa-github ml-6" style="color: #ffffff;"></i>
+                <a href="https://github.com/betsynohe" target="_blank"> GitHub</a>
+            </p>
+        </div>
+    </footer>
     <script src="app/api.js"></script>
     <script src="app/dom.js"></script>
 </body>
