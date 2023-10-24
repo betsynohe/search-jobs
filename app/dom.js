@@ -46,7 +46,7 @@ const renderJobs = (jobs) => {
     if (jobs) {
         setTimeout(() => {
             hideElement("#spinner")
-            $("#main-background").style.backgroundColor="#e6d69e"
+            /* $("#main-background").style.backgroundColor="#8eb545" */
             for (const { name, image1, image2, description, ubication, category, experience, id } of jobs) {
                 $("#cards-container").innerHTML +=
                     ` <section class="column is-4">
@@ -101,72 +101,72 @@ const renderJobDetails = ({ image1, name, description, salary, ubication, experi
         hideElement("#spinner")
         $("#card-description").innerHTML += `
             <div class="card-content is-flex is-flex-direction-column">
-                            <div class="is-flex column is-multiline is-12">
-                                <div class="column is-4">
-                                    <figure class="image is-5by4">
-                                        <img src="${image1}" alt="${name}">
-                                    </figure>
-                                </div>
-                                <section class="column is-8 is-flex is-flex-direction-column">
-                                    <div class="mt-3 mb-3">
-                                        <p class="title is-size-2">${name}</p>
-                                    </div>
-                                    <div>
-                                        <p class="is-size-3">
-                                        ${description}
-                                        </p>
-                                    </div>
-                                </section>
-                            </div>
-                            <section class="column is is-flex is-multiline is-12">
-                                <section class="column is-6">
-                                    <div class="is-flex">
-                                        <img class="mr-3 image is-64x64" src="./assets/icons8-scrolls-64.png"
-                                            alt="pergamino icon">
-                                        <p class="title is-size-2-tablet">Beneficios</p>
-                                    </div>
-                                    <p class="is-size-3">Vacaciones</p>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered"> ${vacation}</p>
-                                    <p class="is-size-3">Seguro Médico</p>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered"> ${healt_insurance}</p>
-                                    <p class="is-size-3">Cupones para canjear por Dumplings o Fideos</p>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered">${renderBoolean(food_coupons)}</p>
-                                </section>
-                                <section class="column is-6 is-right">
-                                    <div class="is-flex">
-                                        <img class=" mr-3 image is-64x64" src="./assets/icons8-requisito-64.png"
-                                            alt="pergamino icon">
-                                        <p class="title is-size-2-tablet">Requisitos</p>
-                                    </div>
-                                    <p class="is-size-3">Experiencia</p>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered">${renderBoolean(experience)}</p>
-                                </section>
-                            </section>
-                            <section class="column is is-flex is-multiline is-12 mt-6">
-                                <section class="column is-6">
-                                    <div class="is-flex">
-                                        <img class="mr-3 image is-64x64" src="./assets/icons8-definir-ubicación-68.png"
-                                            alt="${ubication}">
-                                        <p class="title is-size-2-tablet">Ubicación</p>
-                                    </div>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered">${ubication}</p>
-                                </section>
-                                <section class="column is-6 is-right">
-                                    <div class="is-flex">
-                                        <img class=" mr-3 image is-64x64" src="./assets/icons8-yuan-64.png"
-                                            alt="${salary}">
-                                        <p class="title is-size-2-tablet">Salario</p>
-                                    </div>
-                                    <p class="title is-size-4 has-text-white has-background-black has-text-centered">${salary}</p>
-                                </section>
-                            </section>
-                            <div class="column is-flex is-justify-content-center mt-3">
-                                <button class="btn-edit button has-text-black is-medium is-success mr-6" data-id="${id}">Editar Trabajo</button>
-                                <button class="btn-delete button has-text-black is-medium is-danger" data-id="${id}">
-                                    Eliminar Trabajo
-                                </button>
-                            </div>
+                <div class="is-flex column is-multiline is-12 container-card-description">
+                    <div class="column is-4">
+                        <figure class="image is-5by4">
+                            <img src="${image1}" alt="${name}">
+                        </figure>
+                    </div>
+                    <section class="column is-8 is-flex is-flex-direction-column">
+                        <div class="mt-3 mb-3">
+                            <p class="title is-size-2 is-size-3-mobile">${name}</p>
                         </div>
+                        <div>
+                            <p class="is-size-3 is-size-6-mobile">
+                            ${description}
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <section class="column is is-flex is-multiline is-12">
+                    <section class="column is-6">
+                        <div class="is-flex info-description">
+                            <img class="mr-3 is-64x64 icon-description" src="./assets/icons8-scrolls-64.png"
+                                alt="pergamino icon">
+                            <p class="title is-size-2-tablet is-size-5-mobile">Beneficios</p>
+                        </div>
+                        <p class="is-size-3 is-size-5-mobile">Vacaciones</p>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered"> ${vacation}</p>
+                        <p class="is-size-3 is-size-5-mobile">Seguro Médico</p>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered"> ${healt_insurance}</p>
+                        <p class="is-size-3 is-size-5-mobile">Cupones para Dumplings</p>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered">${renderBoolean(food_coupons)}</p>
+                    </section>
+                    <section class="column is-6 is-right">
+                        <div class="is-flex info-description">
+                            <img class=" mr-3 is-64x64 icon-description" src="./assets/icons8-requisito-64.png"
+                                alt="pergamino icon">
+                            <p class="title is-size-2-tablet is-size-5-mobile">Requisitos</p>
+                        </div>
+                        <p class="is-size-3 is-size-5-mobile">Experiencia</p>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered">${renderBoolean(experience)}</p>
+                    </section>
+                </section>
+                <section class="column is is-flex is-multiline is-12 mt-6">
+                    <section class="column is-6">
+                        <div class="is-flex info-description">
+                            <img class="mr-3 is-64x64 icon-description" src="./assets/icons8-definir-ubicación-68.png"
+                                alt="${ubication}">
+                            <p class="title is-size-2-tablet is-size-5-mobile">Ubicación</p>
+                        </div>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered">${ubication}</p>
+                    </section>
+                    <section class="column is-6 is-right">
+                        <div class="is-flex info-description">
+                            <img class=" mr-3 is-64x64 icon-description" src="./assets/icons8-yuan-64.png"
+                                alt="${salary}">
+                            <p class="title is-size-2-tablet is-size-5-mobile">Salario</p>
+                        </div>
+                        <p class="title is-size-4 is-size-6-mobile has-text-white has-background-black has-text-centered">${salary}</p>
+                    </section>
+                </section>
+                <div class="column is-flex is-justify-content-center mt-3">
+                    <button class="btn-edit button is-responsive has-text-black is-medium is-success mr-3" data-id="${id}">Editar Trabajo</button>
+                    <button class="btn-delete button is-responsive has-text-black is-medium is-danger" data-id="${id}">
+                        Eliminar Trabajo
+                    </button>
+                </div>
+            </div>
             `
             for (const btn of $$(".btn-edit")) {
                 btn.addEventListener("click", () => {
