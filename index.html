@@ -42,12 +42,11 @@
     </header>
     <!-- main -->
     <main id="main-background">
-        <div class="banner2 is-hidden" id="banner-description"></div>
+        <div class="segundo-banner is-hidden" id="banner-description"></div>
         <section class="banner is-flex is-flex-direction-column">
             <!-- select de categorias -->
-            <section>
-                <section class="is-mobile is-flex is-flex-wrap-wrap is-justify-content-center pt-6">
-                    <div class="control columns is-desktop has-icons-left ml-6 mr-4">
+                <section class="is-flex is-justify-content-center pt-6 container-selects">
+                    <div class="control has-icons-left ml-6 mr-4">
                         <div class="select is-rounded is-small ">
                             <select name="filter-category" id="category">
                                 <option value="" selected>Categoria</option>
@@ -63,29 +62,8 @@
                             <i class="fas fa-globe"></i>
                         </div>
                     </div>
-                    <!-- select de locaciones -->
-                    <div class="control columns is-desktop has-icons-left mr-4">
-                        <div class="select is-rounded is-small">
-                            <select name="filter-location" id="locationes">
-                                <option value="" selected>Ubicación</option>
-                                <option value="Valle de la Paz">Valle de la Paz</option>
-                                <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
-                                <option value="Tienda de Fideos">Tienda de Fideos</option>
-                                <option value="Villa de los Artesanos">Villa de los Artesanos</option>
-                                <option value="Palacio de Jade">Palacio de Jade</option>
-                                <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
-                                <option value="Aldea de Pandas">Aldea de Pandas</option>
-                                <option value="Mercado de Moshu">Mercado de Moshu</option>
-                                <option value="Prisión de Gongmen">Prisión de Gongmen</option>
-                                <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
-                            </select>
-                        </div>
-                        <div class="icon is-small is-left">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </div>
-                    </div>
                     <!-- select de experiencia -->
-                    <div class="control columns is-desktop has-icons-left mr-4">
+                    <div class="control has-icons-left mr-4 select-select">
                         <div class="select is-rounded is-small">
                             <select name="filter-experience" id="experience">
                                 <option value="" selected>Experiencia</option>
@@ -97,9 +75,30 @@
                             <i class="fas fa-globe"></i>
                         </div>
                     </div>
+                    <!-- select de locaciones -->
+                <div class="control has-icons-left mr-4 select-select">
+                    <div class="select is-rounded is-small">
+                        <select name="filter-location" id="locationes">
+                            <option value="" selected>Ubicación</option>
+                            <option value="Valle de la Paz">Valle de la Paz</option>
+                            <option value="Ciudad de Gongmen">Ciudad de Gongmen</option>
+                            <option value="Tienda de Fideos">Tienda de Fideos</option>
+                            <option value="Villa de los Artesanos">Villa de los Artesanos</option>
+                            <option value="Palacio de Jade">Palacio de Jade</option>
+                            <option value="Orfanato Bao Gu">Orfanato Bao Gu</option>
+                            <option value="Aldea de Pandas">Aldea de Pandas</option>
+                            <option value="Mercado de Moshu">Mercado de Moshu</option>
+                            <option value="Prisión de Gongmen">Prisión de Gongmen</option>
+                            <option value="Prision de Chorh-Ghom">Prision de Chorh-Ghom</option>
+                        </select>
+                    </div>
+                    <div class="icon is-small is-left">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </div>
                 </section>
                 <!-- botones de busqueda y limpiar filtros -->
-                <div class="is-flex is-justify-content-center is-grouped">
+                <div class="is-flex is-justify-content-center mt-3 is-grouped container-buttons">
                     <button id="search-btn" class="button is-rounded is-success mr-3 ml-6 is-small">
                         <span>Buscar</span>
                         <span class="icon is-small">
@@ -113,14 +112,13 @@
                         </span>
                     </button>
                 </div>
-            </section>
         </section>
         <!-- spinner de carga -->
         <figure id="spinner" class="has-text-centered mt-6 is-hidden">
             <img src="./assets/icon-1s-45px.gif" alt="spinner de carga" />
         </figure>
         <!-- tarjetas de los empleos -->
-        <section class="section is-flex">
+        <section class="section section-padding-large">
             <section class="columns is-multiline" id="cards-container">
                 <!-- aca van las cards desde js -->
             </section>

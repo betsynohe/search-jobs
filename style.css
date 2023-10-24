@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
  body{
     font-family: 'Julee', cursive;
+    background-color: rgb(142, 181, 69);
  }
 
 .banner{
@@ -11,7 +12,7 @@
     background-attachment: fixed;
 }
 
-.banner2{
+.segundo-banner{
     height: 200px;
     background-image: url(./assets/banner-2.jpg);
     background-repeat: no-repeat;
@@ -48,7 +49,7 @@
 }
 
 .card-img-card img:first-child{
-    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    box-shadow: 0 60px 60px -60px black;
     border-radius: 4px;
     width: 100%;
 }
@@ -116,9 +117,40 @@
         margin-bottom: 0 !important;
         width: 60%;
         text-align: center !important;
+        font-size: 20px !important;
     }
     
     .buttons-nav{
         margin-bottom: 5px !important;
+    }
+
+    .banner{
+        background-attachment: scroll;
+    } 
+    .segundo-banner{
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    /* card description */
+
+    .container-card-description{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px){
+    .container-selects{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .select-select{
+        margin-left: 3rem;
+        margin-top: 0.25rem;
+    }
+
+    .container-buttons{
+        margin-top: 20px;
     }
 }
