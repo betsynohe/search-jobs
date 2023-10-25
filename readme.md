@@ -23,13 +23,14 @@ Este el link de la app, podes hacer click aca o copiar y pegar en tu navegador p
 Esta app es totalmente adaptativa y responsive.
 <a href="https://regal-donut-fcffe7.netlify.app/" target="_blank">Click Aquí</a>
 ***
-**Vista incial**
+**Vista inicial**
 <img src="./assets/cap1.png" alt="balance">
 
 **Vista de ver mas info**
 <img src="./assets/cap2.png" alt="balance">
 
 **Vista para celular**
+
 <img src="./assets/cap3.png" alt="balance">
 
 ## _Contacto_
