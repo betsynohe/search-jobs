@@ -51,6 +51,19 @@ body{
     -webkit-box-orient: vertical;
 }
 
+.burger-container{
+    margin-top: 40px;
+    margin-right: 40px;
+    background-color: #4c8d4b;
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.line-burger{
+    height: 2px !important;
+}
+
 /* efecto de las imagenes */
 .card-img-card{
     position: relative;
@@ -157,7 +170,7 @@ body{
 @media (max-width: 520px){
     .container-selects{
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     .select-select{

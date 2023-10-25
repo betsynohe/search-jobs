@@ -200,6 +200,18 @@ const renderBoolean = (value) => {
 
 // FUNCION PARA INICIALIZAR LA APP 
 const initializeApp = () => {
+    /* boton del menu de hamburguesa */
+    $('.navbar-burger').addEventListener('click', () => {
+        if ($('.navbar-burger').classList.contains('is-active')){
+            $('.navbar-burger').classList.toggle('is-active')
+            $('.navbar-menu').classList.toggle('is-active')
+        }
+        else {
+            $('.navbar-burger').classList.toggle('is-active')
+            $('.navbar-menu').classList.toggle('is-active')
+        }
+        })
+
     // crear job
 $("#btn-create-job").addEventListener("click", () => {
     $("#form-add").classList.add("is-active")
@@ -234,7 +246,8 @@ $("#search-btn").addEventListener("click", () =>{
     const experience = $("#experience").value
     const category = $("#category").value
     getJobs(ubication, experience, category)
-    console.log(category);
+    $('.navbar-menu').classList.remove('is-active')
+
 })
 
 $("#category").addEventListener("change", () => {
@@ -257,6 +270,7 @@ $("#reset-btn").addEventListener("click", () => {
     $("#category").value = ""
     $("#experience").value = ""
     getJobs()
+    $('.navbar-menu').classList.remove('is-active')
 })
 }
 

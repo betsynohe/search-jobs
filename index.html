@@ -37,8 +37,18 @@
     <!-- main -->
     <main id="main-background">
         <div class="segundo-banner is-hidden" id="banner-description"></div>
-        <section class="banner is-flex is-flex-direction-column">
-            <!-- select de categorias -->
+
+        <nav class="navbar banner is-flex is-flex-direction-column is-spaced" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-burger burger-container" aria-label="menu">
+                    <span class="line-burger" aria-hidden="true"></span>
+                    <span class="line-burger" aria-hidden="true"></span>
+                    <span class="line-burger" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="navbar-menu is-justify-content-center">
+                <section class="is-flex is-flex-direction-column is-justify-content-center">
+                    <!-- select de categorias -->
             <section class="is-flex is-justify-content-center pt-6 container-selects">
                 <div class="control has-icons-left ml-6 mr-4">
                     <div class="select is-small ">
@@ -91,7 +101,7 @@
                     </div>
                 </div>
             </section>
-            <!-- botones de busqueda y limpiar filtros -->
+            <!-- botones de buscar y limpiar -->
             <div class="is-flex is-justify-content-center mt-3 is-grouped container-buttons">
                 <button id="search-btn" class="button is-responsive is-success mr-3 ml-6 is-small">
                     <span>Buscar</span>
@@ -106,7 +116,9 @@
                     </span>
                 </button>
             </div>
-        </section>
+                </section>
+            </div>
+        </nav>
         <!-- spinner de carga -->
         <figure id="spinner" class="has-text-centered mt-6 is-hidden">
             <img src="./assets/icon-1s-45px.gif" alt="spinner de carga" />
