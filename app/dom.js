@@ -226,7 +226,6 @@ $("#delete-job-btn").addEventListener("click", () => {
 
 $("#cancel-form").addEventListener("click", () =>{
     $("#form-add").classList.remove("is-active")
-    showElement("#cards-container")
 })
 
 $("#form").addEventListener("submit", (e) => {
