@@ -60,6 +60,10 @@ body{
     height: 2.5rem;
 }
 
+.burger-container:hover{
+    background-color: #4c8d4b;
+}
+
 .line-burger{
     height: 2px !important;
 }
